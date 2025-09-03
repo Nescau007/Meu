@@ -212,6 +212,7 @@ end)
 
 -- Scripts de 99 noites
 local Scripts99 = {
+    {Nome = "H4XScripts", Link = "loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua", true))()"},
     {Nome = "SpaceHub", Link = "https://raw.githubusercontent.com/ago106/SpaceHub/refs/heads/main/loader.lua"},
     {Nome = "SpeedHubX", Link = "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"},
     {Nome = "m00ndiett", Link = "https://raw.githubusercontent.com/m00ndiety/99-nights-in-the-forest/refs/heads/main/Main"},
