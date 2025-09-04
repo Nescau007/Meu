@@ -14,13 +14,13 @@ end
 
 -- Tema visual
 local Theme = {
-    Background = Color3.fromRGB(25, 25, 25),
-    Topbar = Color3.fromRGB(40, 40, 40),
-    Sidebar = Color3.fromRGB(30, 30, 30),
-    Button = Color3.fromRGB(50, 50, 50),
-    ButtonHover = Color3.fromRGB(80, 80, 80),
-    Text = Color3.fromRGB(255, 255, 255),
-    Accent = Color3.fromRGB(0, 170, 255)
+    Background = Color3.fromRGB(15, 15, 15), -- Fundo bem escuro
+    Topbar = Color3.fromRGB(25, 25, 25),     -- Um pouco mais claro que o fundo para contraste
+    Sidebar = Color3.fromRGB(20, 20, 20),    -- Um pouco mais claro que o fundo
+    Button = Color3.fromRGB(35, 35, 35),     -- Botões escuros
+    ButtonHover = Color3.fromRGB(60, 60, 60),-- Botão ao passar o mouse
+    Text = Color3.fromRGB(240, 240, 240),    -- Texto quase branco
+    Accent = Color3.fromRGB(0, 150, 255)     -- Azul vibrante como destaque
 }
 
 -- Função para arredondar cantos
@@ -62,7 +62,7 @@ SplashLabel.Position = UDim2.new(0.5,0,0.5,0)
 SplashLabel.Size = UDim2.new(0,400,0,50)
 SplashLabel.Text = "🚀 Carregando Nescau Hub..."
 SplashLabel.Font = Enum.Font.GothamBold
-SplashLabel.TextSize = 22
+SplashLabel.TextSize = 20
 SplashLabel.TextColor3 = Theme.Accent
 SplashLabel.BackgroundTransparency = 1
 
@@ -91,7 +91,7 @@ FloatBtn.AutoButtonColor = true
 FloatBtn.Font = Enum.Font.GothamBold
 FloatBtn.TextSize = 14
 AddCorner(FloatBtn, 8)
-AddShadow(FloatBtn, 0.3)
+AddShadow(FloatBtn, 0.5)
 
 --==================================================--
 --                  Janela Principal
@@ -106,7 +106,7 @@ MainFrame.BorderSizePixel = 0
 MainFrame.Active = true
 MainFrame.Draggable = true
 AddCorner(MainFrame, 10)
-AddShadow(MainFrame, 0.5)
+AddShadow(MainFrame, 0.7)
 
 -- Barra superior
 local Topbar = Instance.new("Frame")
@@ -124,7 +124,7 @@ Title.Position = UDim2.new(0, 10, 0, 0)
 Title.TextXAlignment = Enum.TextXAlignment.Left
 Title.BackgroundTransparency = 1
 Title.Font = Enum.Font.GothamBold
-Title.TextSize = 15
+Title.TextSize = 20
 Title.TextColor3 = Theme.Text
 
 -- Botão minimizar
@@ -186,7 +186,7 @@ Sidebar.Parent = MainFrame
 Sidebar.Size = UDim2.new(0, 160, 1, -35)
 Sidebar.Position = UDim2.new(0, 0, 0, 35)
 Sidebar.BackgroundColor3 = Theme.Sidebar
-AddCorner(Sidebar, 8)
+AddCorner(Sidebar, 10)
 
 -- Função para criar botões
 local function CreateButton(text, parent)
@@ -198,11 +198,11 @@ local function CreateButton(text, parent)
     btn.TextColor3 = Theme.Text
     btn.Text = text
     btn.Font = Enum.Font.Gotham
-    btn.TextSize = 14
+    btn.TextSize = 15
     btn.BorderSizePixel = 0
     btn.AutoButtonColor = false
     AddCorner(btn, 6)
-    AddShadow(btn, 0.4)
+    AddShadow(btn, 0.6)
 
     btn.MouseEnter:Connect(function()
         btn.BackgroundColor3 = Theme.ButtonHover
@@ -226,8 +226,8 @@ MenuLabel.Parent = MenuPanel
 MenuLabel.Size = UDim2.new(1, 0, 0, 50)
 MenuLabel.Text = "✨ Bem-vindo ao Nescau Hub!"
 MenuLabel.BackgroundTransparency = 1
-MenuLabel.Font = Enum.Font.GothamBold
-MenuLabel.TextSize = 18
+MenuLabel.Font = Enum.Font.Gotham
+MenuLabel.TextSize = 20
 MenuLabel.TextColor3 = Theme.Accent
 
 -- Painel: Jogos
@@ -405,8 +405,8 @@ ConfigLabel.Parent = ConfigPanel
 ConfigLabel.Size = UDim2.new(1, 0, 0, 50)
 ConfigLabel.Text = "⚙️ Configurações em breve..."
 ConfigLabel.BackgroundTransparency = 1
-ConfigLabel.Font = Enum.Font.GothamBold
-ConfigLabel.TextSize = 18
+ConfigLabel.Font = Enum.Font.Gotham
+ConfigLabel.TextSize = 20
 ConfigLabel.TextColor3 = Theme.Accent
 
 -- Botões da sidebar
