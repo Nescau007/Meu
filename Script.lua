@@ -140,7 +140,7 @@ AddCorner(Topbar, 10)
 
 local Title = Instance.new("TextLabel")
 Title.Parent = Topbar
-Title.Text = "🌌 Nescau Hub Master v0.3"
+Title.Text = "🌌 Nescau Hub Master v0.4"
 Title.Size = UDim2.new(1, -120, 1, 0)
 Title.Position = UDim2.new(0, 10, 0, 0)
 Title.TextXAlignment = Enum.TextXAlignment.Left
