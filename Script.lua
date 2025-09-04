@@ -290,20 +290,49 @@ Jogo99.MouseButton1Click:Connect(function()
     ShowPanel("99 Noites na FlorestaScripts")
 end)
 
+local JogoBloxFruits = CreateButton("⚔️ BloxFruits", JogosList)
+table.insert(JogosBotoes, JogoBloxFruits)
+JogoBloxFruits.MouseButton1Click:Connect(function()
+    ShowPanel("BloxFruitsScripts")
+end)
+
 -- Scripts de 99 noites
 local Scripts99 = {
-    {Nome = "H4XScripts", Link = "https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"},
+    {Nome = "H4XScripts(key)", Link = "https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"},
     {Nome = "SpaceHub", Link = "https://raw.githubusercontent.com/ago106/SpaceHub/refs/heads/main/loader.lua"},
-    {Nome = "SpeedHubX", Link = "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"},
-    {Nome = "m00ndiett", Link = "https://raw.githubusercontent.com/m00ndiety/99-nights-in-the-forest/refs/heads/main/Main"},
+    {Nome = "SpeedHubX(key)", Link = "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"},
+    {Nome = "m00ndiett(key)", Link = "https://raw.githubusercontent.com/m00ndiety/99-nights-in-the-forest/refs/heads/main/Main"},
     {Nome = "Teste", Link = "https://api.exploitingis.fun/loader"},
-    {Nome = "voidware", Link = "https://raw.githubusercontent.com/VapeVoidware/VWExtra/main/NightsInTheForest.lua"},
-    {Nome = "hutao hub", Link = "https://raw.githubusercontent.com/SLK-gaming/Hutao-Hub/refs/heads/main/99-Nights-In-The-Forest.txt"},
-    {Nome = "adibhub", Link = "https://raw.githubusercontent.com/adibhub1/99-nighit-in-forest/refs/heads/main/99%20night%20in%20forest"},
-    {Nome = "kiki-ware", Link = "https://raw.githubusercontent.com/KiKi-Ware/Roblox/refs/heads/main/Key"},
+    {Nome = "voidware(Nokey)", Link = "https://raw.githubusercontent.com/VapeVoidware/VWExtra/main/NightsInTheForest.lua"},
+    {Nome = "hutao hub(Nokey)", Link = "https://raw.githubusercontent.com/SLK-gaming/Hutao-Hub/refs/heads/main/99-Nights-In-The-Forest.txt"},
+    {Nome = "adibhub(nokey)", Link = "https://raw.githubusercontent.com/adibhub1/99-nighit-in-forest/refs/heads/main/99%20night%20in%20forest"},
+    {Nome = "kiki-ware(key)", Link = "https://raw.githubusercontent.com/KiKi-Ware/Roblox/refs/heads/main/Key"},
     {Nome = "syzen Hub", Link = "https://raw.githubusercontent.com/Black69Weed-dev/99-Night-in-the-forest/main/99%20nights%20in%20the%20forest.lua"}
 }
 CriarPainelDeScripts("99 Noites na Floresta", Scripts99)
+
+-- Scripts de BloxFruits
+local ScriptsBloxFruits = {
+    {Nome = "Alchemy Hub Script", Link = "https://scripts.alchemyhub.xyz"},
+    {Nome = "Banana Cat Hub", Link = "https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"},
+    {Nome = "Speed Hub X", Link = "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"},
+    {Nome = "Raito Hub", Link = "https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script"},
+    {Nome = "HoHo Hub Script", Link = "https://raw.githubusercontent.com/ascn123/HOHO_H/main/Loading_UI"},
+    {Nome = "ThunderZ Chest Script", Link = "https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/BloxFruit/Chest/AllDevices.lua"},
+    {Nome = "W-Azure Hub", Link = "https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"},
+    {Nome = "redZ Hub", Link = "https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"},
+    {Nome = "Ronix Hub", Link = "https://api.luarmor.net/files/v3/loaders/513ccdb3ae8a61d4d7698fc337e5256d.lua"},
+    {Nome = "Level Farm (0 to Max)", Link = "https://raw.githubusercontent.com/simple-hubs/contents/refs/heads/main/bloxfruit-kaitan-main.lua"},
+    {Nome = "Quantum Onyx Project", Link = "https://raw.githubusercontent.com/FlazhGG/QTONYX/refs/heads/main/NextGeneration.lua"},
+    {Nome = "Flow Hub", Link = "https://raw.githubusercontent.com/Yumiara/Overflow/refs/heads/main/Main.lua"},
+    {Nome = "AnDepZai Hub", Link = "https://raw.githubusercontent.com/AnDepZaiHub/AnDepZaiHubBeta/refs/heads/main/AnDepZaiHubNewUpdated.lua"},
+    {Nome = "BlueX Hub", Link = "https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"},
+    {Nome = "Cokka Hub", Link = "https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"},
+    {Nome = "Aurora Hub", Link = "https://raw.githubusercontent.com/Jadelly261/BloxFruits/main/Aurora"},
+    {Nome = "Volcano Hub", Link = "https://raw.githubusercontent.com/indexeduu/BF-NewVer/refs/heads/main/V3New.lua"},
+    {Nome = "Lion Fruit Finder Script", Link = "https://api.luarmor.net/files/v3/loaders/d734d024f3000caddd23122da89a6c3e.lua"}
+}
+CriarPainelDeScripts("BloxFruits", ScriptsBloxFruits)
 
 -- Filtrar jogos
 local function FiltrarJogos(texto)
