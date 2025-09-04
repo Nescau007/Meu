@@ -239,7 +239,8 @@ end
 -- Painel: Menu
 local MenuPanel = Instance.new("Frame")
 MenuPanel.Size = UDim2.new(1, 0, 1, 0)
-MenuPanel.BackgroundTransparency = 1
+MenuPanel.BackgroundTransparency = 0 -- Alterado para 0 para ter fundo visível
+MenuPanel.BackgroundColor3 = Theme.Sidebar -- Definido para cinza escuro
 MenuPanel.Parent = Content
 Panels["Menu"] = MenuPanel
 
@@ -251,8 +252,9 @@ MenuLabel.BackgroundTransparency = 1
 MenuLabel.Font = Enum.Font.Gotham
 MenuLabel.TextSize = 20
 MenuLabel.TextColor3 = Theme.Accent
+MenuLabel.TextXAlignment = Enum.TextXAlignment.Center -- Centralizar texto do título do menu
 
-local ChangesLog = Instance.new("TextLabel")
+local ChangesLog = Instance.new("ScrollingFrame") -- Alterado para ScrollingFrame
 ChangesLog.Parent = MenuPanel
 ChangesLog.Size = UDim2.new(1, -20, 1, -60)
 ChangesLog.Position = UDim2.new(0, 10, 0, 60)
@@ -263,6 +265,8 @@ ChangesLog.Font = Enum.Font.Gotham
 ChangesLog.TextSize = 14
 ChangesLog.TextColor3 = Theme.Text
 ChangesLog.TextWrapped = true
+ChangesLog.ScrollBarThickness = 8 -- Adicionado espessura da barra de rolagem
+ChangesLog.CanvasSize = UDim2.new(0, 0, 2, 0) -- Ajustado para permitir rolagem vertical
 ChangesLog.Text = [[
 Últimas Alterações e Melhorias:
 --------------------------------
@@ -294,7 +298,8 @@ ChangesLog.Text = [[
 -- Painel: Jogos
 local JogosPanel = Instance.new("Frame")
 JogosPanel.Size = UDim2.new(1, 0, 1, 0)
-JogosPanel.BackgroundTransparency = 1
+JogosPanel.BackgroundTransparency = 0 -- Alterado para 0 para ter fundo visível
+JogosPanel.BackgroundColor3 = Theme.Sidebar -- Definido para cinza escuro
 JogosPanel.Parent = Content
 JogosPanel.Visible = false
 Panels["Jogos"] = JogosPanel
@@ -456,7 +461,8 @@ end)
 -- Painel: Configurações
 local ConfigPanel = Instance.new("Frame")
 ConfigPanel.Size = UDim2.new(1, 0, 1, 0)
-ConfigPanel.BackgroundTransparency = 1
+ConfigPanel.BackgroundTransparency = 0 -- Alterado para 0 para ter fundo visível
+ConfigPanel.BackgroundColor3 = Theme.Sidebar -- Definido para cinza escuro
 ConfigPanel.Parent = Content
 ConfigPanel.Visible = false
 Panels["Config"] = ConfigPanel
