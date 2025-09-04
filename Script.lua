@@ -296,6 +296,18 @@ JogoBloxFruits.MouseButton1Click:Connect(function()
     ShowPanel("BloxFruitsScripts")
 end)
 
+local JogoRoubeBrainrot = CreateButton("🧠 Roube um Brainrot", JogosList)
+table.insert(JogosBotoes, JogoRoubeBrainrot)
+JogoRoubeBrainrot.MouseButton1Click:Connect(function()
+    ShowPanel("RoubeUmBrainrotScripts")
+end)
+
+local JogoGrowAGarden = CreateButton("🌱 Grow a Garden", JogosList)
+table.insert(JogosBotoes, JogoGrowAGarden)
+JogoGrowAGarden.MouseButton1Click:Connect(function()
+    ShowPanel("GrowAGardenScripts")
+end)
+
 -- Scripts de 99 noites
 local Scripts99 = {
     {Nome = "H4XScripts(key)", Link = "https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"},
@@ -333,6 +345,34 @@ local ScriptsBloxFruits = {
     {Nome = "Lion Fruit Finder Script", Link = "https://api.luarmor.net/files/v3/loaders/d734d024f3000caddd23122da89a6c3e.lua"}
 }
 CriarPainelDeScripts("BloxFruits", ScriptsBloxFruits)
+
+-- Scripts de Roube um Brainrot
+local ScriptsRoubeBrainrot = {
+    {Nome = "Script Roblox Steal a Brainrot", Link = "https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/StealaBrainrot"},
+    {Nome = "OP SCRIPT Auto", Link = "https://raw.githubusercontent.com/OverflowBGSI/Overflow/refs/heads/main/loader.txt"},
+    {Nome = "Script Steal a Brainrot — um dos melhores scripts", Link = "https://raw.githubusercontent.com/KaspikScriptsRb/steal-a-brainrot/refs/heads/main/.lua"},
+    {Nome = "Script Steal a Brainrot Funcionando - Roubo Automático, Voar, NoClip", Link = "https://raw.githubusercontent.com/m00ndiety/Steal-a-brainrot/refs/heads/main/Steal-a-Brainrot"},
+    {Nome = "Auto farm/ roubo instantaneo", Link = "https://pastebin.com/raw/HFx6faQY"},
+    {Nome = "Lurk Hack", Link = "https://raw.githubusercontent.com/egor2078f/lurkhackv4/refs/heads/main/main.lua"},
+    {Nome = "Scripts de Auto Farm", Link = "https://raw.githubusercontent.com/Ayvathion/AV-On-Top/refs/heads/main/Loader.lua"},
+    {Nome = "Ronix Hub", Link = "https://api.luarmor.net/files/v3/loaders/7d8a2a1a9a562a403b52532e58a14065.lua"},
+    {Nome = "Y Hub – Roubo Instantâneo, Auto Lock", Link = "https://raw.githubusercontent.com/yue-os/script/refs/heads/main/Y-Hub"},
+    {Nome = "EcstacyV2 Hub – Roubo, Speed Hack, ESP", Link = "https://raw.githubusercontent.com/ecstacyV2/EcstacyV2/refs/heads/main2/EcstacyV2Real"}
+}
+CriarPainelDeScripts("RoubeUmBrainrot", ScriptsRoubeBrainrot)
+
+-- Scripts de Grow a Garden
+local ScriptsGrowAGarden = {
+    {Nome = "AVOnTop No Key – Auto Farming, Auto Summer and More", Link = "https://raw.githubusercontent.com/Ayvathion/AV-On-Top/refs/heads/main/Loader.lua"},
+    {Nome = "GAG Script – Auto Planting, Auto Water, Anti AFK", Link = "https://api.luarmor.net/files/v3/loaders/7d8a2a1a9a562a403b52532e58a14065.lua"},
+    {Nome = "Y-Hub – Auto Collect, Auto Buy, Auto Sell", Link = "https://raw.githubusercontent.com/yue-os/script/refs/heads/main/Y-Hub"},
+    {Nome = "Thunder Z – Grow a Garden NEW Script Keyless", Link = "https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/GaG/Main.lua"},
+    {Nome = "No Lag Keyless", Link = "https://raw.githubusercontent.com/greywaterstill/GAG/refs/heads/main/nathub.lua"},
+    {Nome = "New Grow a Garden Script Updated – Auto Planting, Auto Water, Anti-AFK & more", Link = "https://api.luarmor.net/files/v3/loaders/b778b0425fce68591d34cc9d0a04fe3b.lua"},
+    {Nome = "Grow a Garden Script Mobile (Android) AlterHub – Auto Farm, Auto Buy, NoClip", Link = "https://raw.githubusercontent.com/frvaunted/Main/refs/heads/main/Alter%20Hub"},
+    {Nome = "Grow a Garden Script New Update – Auto Farm, Auto Plant", Link = "https://raw.githubusercontent.com/nootmaus/GrowAAGarden/refs/heads/main/mauscripts"}
+}
+CriarPainelDeScripts("GrowAGarden", ScriptsGrowAGarden)
 
 -- Filtrar jogos
 local function FiltrarJogos(texto)
