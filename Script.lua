@@ -14,11 +14,11 @@ end
 
 -- Tema visual
 local Theme = {
-    Background = Color3.fromRGB(10, 10, 10), -- Fundo bem escuro, quase preto
-    Topbar = Color3.fromRGB(20, 20, 20),     -- Cinza muito escuro para contraste na barra superior
-    Sidebar = Color3.fromRGB(15, 15, 15),    -- Cinza escuro para a barra lateral
-    Button = Color3.fromRGB(30, 30, 30),     -- Botões cinza escuro
-    ButtonHover = Color3.fromRGB(50, 50, 50),-- Botão ao passar o mouse com um cinza um pouco mais claro
+    Background = Color3.fromRGB(5, 5, 5),   -- Fundo quase preto
+    Topbar = Color3.fromRGB(15, 15, 15),    -- Cinza muito escuro para a barra superior
+    Sidebar = Color3.fromRGB(10, 10, 10),   -- Cinza escuro para a barra lateral
+    Button = Color3.fromRGB(25, 25, 25),    -- Botões cinza escuro
+    ButtonHover = Color3.fromRGB(40, 40, 40),-- Botão ao passar o mouse com um cinza um pouco mais claro
     Text = Color3.fromRGB(240, 240, 240),    -- Texto quase branco
     Accent = Color3.fromRGB(0, 150, 255)     -- Azul vibrante como destaque
 }
