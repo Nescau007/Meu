@@ -252,6 +252,45 @@ MenuLabel.Font = Enum.Font.Gotham
 MenuLabel.TextSize = 20
 MenuLabel.TextColor3 = Theme.Accent
 
+local ChangesLog = Instance.new("TextLabel")
+ChangesLog.Parent = MenuPanel
+ChangesLog.Size = UDim2.new(1, -20, 1, -60)
+ChangesLog.Position = UDim2.new(0, 10, 0, 60)
+ChangesLog.BackgroundTransparency = 1
+ChangesLog.TextXAlignment = Enum.TextXAlignment.Left
+ChangesLog.TextYAlignment = Enum.TextYAlignment.Top
+ChangesLog.Font = Enum.Font.Gotham
+ChangesLog.TextSize = 14
+ChangesLog.TextColor3 = Theme.Text
+ChangesLog.TextWrapped = true
+ChangesLog.Text = [[
+Últimas Alterações e Melhorias:
+--------------------------------
+
+- **Integração BloxFruits:**
+    - Adicionado botão "BloxFruits" (18 scripts).
+    - Painel de scripts dedicado.
+
+- **Integração Roube um Brainrot:**
+    - Adicionado botão "Roube um Brainrot" (10 scripts).
+    - Painel de scripts dedicado.
+
+- **Integração Grow a Garden:**
+    - Adicionado botão "Grow a Garden" (8 scripts).
+    - Painel de scripts dedicado.
+
+- **Melhorias Visuais (Tema Preto Profissional):**
+    - Esquema de cores refinado (fundo escuro, detalhes em azul vibrante).
+    - Sombras mais sutis e elegantes.
+    - Tipografia padronizada (títulos: 20, botões: 15, fonte Gotham).
+    - Cantos arredondados consistentes (Sidebar: 10).
+
+- **Tela de Carregamento Aprimorada:**
+    - Duração de 5 segundos.
+    - Mensagem: "✨ Bem-vindo ao Nescau Hub!".
+    - Animação de contador de 0-100%.
+]]
+
 -- Painel: Jogos
 local JogosPanel = Instance.new("Frame")
 JogosPanel.Size = UDim2.new(1, 0, 1, 0)
@@ -430,6 +469,12 @@ ConfigLabel.BackgroundTransparency = 1
 ConfigLabel.Font = Enum.Font.Gotham
 ConfigLabel.TextSize = 20
 ConfigLabel.TextColor3 = Theme.Accent
+
+local AntiAFKBtn = CreateButton("Anti AFK", ConfigPanel)
+AntiAFKBtn.Position = UDim2.new(0, 10, 0, 60) -- Adjust position below ConfigLabel
+AntiAFKBtn.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+end)
 
 -- Botões da sidebar
 local BtnMenu = CreateButton("🏠 Menu", Sidebar)
