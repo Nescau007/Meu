@@ -60,17 +60,39 @@ SplashLabel.Parent = Splash
 SplashLabel.AnchorPoint = Vector2.new(0.5,0.5)
 SplashLabel.Position = UDim2.new(0.5,0,0.5,0)
 SplashLabel.Size = UDim2.new(0,400,0,50)
-SplashLabel.Text = "🚀 Carregando Nescau Hub..."
+SplashLabel.Text = "✨ Bem-vindo ao Nescau Hub!"
 SplashLabel.Font = Enum.Font.GothamBold
 SplashLabel.TextSize = 20
 SplashLabel.TextColor3 = Theme.Accent
 SplashLabel.BackgroundTransparency = 1
 
--- Animação de Fade Out após 2 segundos
+local LoadingProgress = Instance.new("TextLabel")
+LoadingProgress.Parent = Splash
+LoadingProgress.AnchorPoint = Vector2.new(0.5,0.5)
+LoadingProgress.Position = UDim2.new(0.5,0,0.6,0)
+LoadingProgress.Size = UDim2.new(0,200,0,30)
+LoadingProgress.Text = "0%"
+LoadingProgress.Font = Enum.Font.Gotham
+LoadingProgress.TextSize = 18
+LoadingProgress.TextColor3 = Theme.Text
+LoadingProgress.BackgroundTransparency = 1
+
+-- Animação de Fade Out após 5 segundos
 task.spawn(function()
-    task.wait(2)
+    local duration = 5
+    local startTime = tick()
+    
+    while tick() - startTime < duration do
+        local progress = math.min(1, (tick() - startTime) / duration)
+        LoadingProgress.Text = math.floor(progress * 100) .. "%"
+        task.wait(0.05) -- Update every 0.05 seconds
+    end
+    LoadingProgress.Text = "100%"
+    
+    task.wait(0.5) -- Small delay after reaching 100%
     TweenService:Create(Splash, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
     TweenService:Create(SplashLabel, TweenInfo.new(1), {TextTransparency = 1}):Play()
+    TweenService:Create(LoadingProgress, TweenInfo.new(1), {TextTransparency = 1}):Play()
     task.wait(1)
     Splash:Destroy()
 end)
