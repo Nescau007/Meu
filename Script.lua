@@ -254,7 +254,7 @@ MenuLabel.TextSize = 20
 MenuLabel.TextColor3 = Theme.Accent
 MenuLabel.TextXAlignment = Enum.TextXAlignment.Center -- Centralizar texto do título do menu
 
-local ChangesLog = Instance.new("ScrollingFrame") -- Alterado para ScrollingFrame
+local ChangesLog = Instance.new("TextLabel")
 ChangesLog.Parent = MenuPanel
 ChangesLog.Size = UDim2.new(1, -20, 1, -60)
 ChangesLog.Position = UDim2.new(0, 10, 0, 60)
@@ -265,8 +265,6 @@ ChangesLog.Font = Enum.Font.Gotham
 ChangesLog.TextSize = 14
 ChangesLog.TextColor3 = Theme.Text
 ChangesLog.TextWrapped = true
-ChangesLog.ScrollBarThickness = 8 -- Adicionado espessura da barra de rolagem
-ChangesLog.CanvasSize = UDim2.new(0, 0, 2, 0) -- Ajustado para permitir rolagem vertical
 ChangesLog.Text = [[
 Últimas Alterações e Melhorias:
 --------------------------------
@@ -336,8 +334,6 @@ local function CriarPainelDeScripts(nome, scripts)
     painel.Size = UDim2.new(1, 0, 1, 0)
     painel.Visible = false
     painel.BackgroundTransparency = 1
-    painel.ScrollBarThickness = 6
-    painel.CanvasSize = UDim2.new(0,0,0, #scripts * 50)
     Panels[painel.Name] = painel
 
     for i, scriptData in ipairs(scripts) do
